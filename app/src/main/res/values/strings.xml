@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">WePark</string>
+    <string name="title_activity_main">WePark</string>
+    <string name="google_maps_key">AIzaSyD0kaMGap9DKxsgVzjetu9q1t2zD-6cDX8</string>
+
+    <!-- Text Label Strings -->
+    <string name="label_login">Login</string>
+
+    <!-- Button Label Strings -->
+    <string name="action_settings">Settings</string>
+    <string name="password_hint">Password</string>
+    <string name="username_hint">Username</string>
+    <string name="button_login">Log In</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="button_skip">Skip Login</string>
+
+    <!-- Strings related to Settings -->
+    <string name="button_logout">Log Out</string>
+
+</resources>

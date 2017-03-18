@@ -1,0 +1,79 @@
+<ViewFlipper
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewFlipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animationCache="true"
+        android:background="@color/black">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:layout_centerInParent="true"
+            android:background="@drawable/splash_drawable"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            tools:context="com.wepark.eg.wepark.MainActivity"
+            tools:layout="@layout/abc_action_bar_title_item" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Settings"
+            android:id="@+id/bSettings"
+            android:onClick="SettingsClick"
+            android:background="@drawable/settings_img"
+            android:layout_margin="1dp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="Park Car Here"
+                android:id="@+id/bParkCar"
+                android:onClick="MainButtonClick"
+                android:layout_gravity="bottom|start"
+                android:layout_weight="0.5"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:background="@drawable/park_button_style"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="Find Parking"
+                android:id="@+id/bFind"
+                android:onClick="QueryParkingClick"
+                android:layout_gravity="bottom|end"
+                android:layout_weight="0.5"
+                android:background="@drawable/find_button_style"
+                android:textColor="@color/black"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</ViewFlipper>

@@ -134,7 +134,7 @@ public class Client
 
                     Log.e("WePark", "received from server: " + in);
                     System.out.println("got a new message!!!!!!!!!!!!!!!!!!!!!");
-                    MainActivity.getInstance().newMessage(in);
+                   // MainActivity.getInstance().newMessage(in);
                     if (in.startsWith("a"))//CONNECTION_ACCEPTED
                     {
                         MainActivity.getInstance().ConnectionEstablished();
@@ -168,7 +168,7 @@ public class Client
         {
             try
             {
-                InetAddress serverAddr = InetAddress.getByName("192.168.1.192");
+                InetAddress serverAddr = InetAddress.getByName("162.206.133.148");
                 ClientSocket = new Socket();//serverAddr, 6005);
                 ClientSocket.connect(new InetSocketAddress(serverAddr, 6005), 8000);
 

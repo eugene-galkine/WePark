@@ -330,7 +330,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             public void run() {
                 if (mMap != null)
                     mMap.clear();
-                Toast.makeText(MainActivity.this, "setting is parked to " + isParked, Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this, "setting is parked to " + isParked, Toast.LENGTH_LONG).show();
                 mainButton.setText(isParked ? "Leave Parking" : "Park Here");
                 secondButton.setText(isParked ? "Find Car" : "Find Parking");
             }

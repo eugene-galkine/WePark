@@ -303,7 +303,7 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void run()
             {
-                if (in.length() > 1)
+                //if (in.length() > 1)
                 Toast.makeText(MainActivity.this, "New message: " + in + " in.substring: " + in.substring(1), Toast.LENGTH_LONG).show();
 
             }

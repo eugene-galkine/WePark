@@ -121,6 +121,7 @@ public class Client
         @Override
         public void run()
         {
+            //Log.d("UPark", "doing a thing");
             try
             {
                 String in;
@@ -132,9 +133,9 @@ public class Client
                     //remove null characters
                     in = in.replace(((char)0) + "", "");
 
-                    Log.e("WePark", "received from server: " + in);
-                    System.out.println("got a new message!!!!!!!!!!!!!!!!!!!!!");
-                   // MainActivity.getInstance().newMessage(in);
+                   // Log.e("WePark", "received from server: " + in);
+                   // System.out.println("got a new message!!!!!!!!!!!!!!!!!!!!!");
+                    //MainActivity.getInstance().newMessage(in);
                     if (in.startsWith("a"))//CONNECTION_ACCEPTED
                     {
                         MainActivity.getInstance().ConnectionEstablished();

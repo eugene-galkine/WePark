@@ -3,6 +3,6 @@
     <item android:state_pressed="true"
           android:drawable="@drawable/circle_blue_selected"/> <!-- pressed -->
     <item android:state_focused="true"
-          android:drawable="@drawable/circle_blue"/> <!-- focused -->
-    <item android:drawable="@drawable/circle_blue"/> <!-- default -->
+          android:drawable="@drawable/circle_white"/> <!-- focused -->
+    <item android:drawable="@drawable/circle_white"/> <!-- default -->
 </selector>

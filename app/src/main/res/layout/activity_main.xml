@@ -48,10 +48,10 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="25dp">
+            android:paddingBottom="30dp">
 
             <RelativeLayout
-                android:layout_width="200dp"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true">
@@ -79,7 +79,7 @@
                     android:onClick="QueryParkingClick"
                     android:layout_alignParentRight="true"
                     android:text="Find Parking"
-                    android:layout_marginLeft="60dp"
+                    android:layout_marginLeft="30dp"
                     android:textColor="@color/black"/>
             </RelativeLayout>
         </RelativeLayout>

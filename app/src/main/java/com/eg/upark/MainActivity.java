@@ -123,8 +123,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         //init the map
         MapsInitializer.initialize(this);
-        mMap.getUiSettings().setCompassEnabled(false);
-        mMap.getUiSettings().setRotateGesturesEnabled(false);
+        //mMap.getUiSettings().setCompassEnabled(false);
+        //mMap.getUiSettings().setRotateGesturesEnabled(false);
     }
 
     @Override

@@ -8,8 +8,8 @@
                 android:drawable="@drawable/circle_shadow" />
             <item
                 android:drawable="@drawable/circle_white"
-                android:bottom="4px"
-                android:right="2px" />
+                android:bottom="2dp"
+                android:right="2dp" />
         </layer-list>
     </item>
 </selector>

@@ -81,12 +81,23 @@ public class Client
         connect();
     }
 
-    private void sendMessage (String s)
+    private void sendMessage (final String s)
     {
-        try
+        //MainActivity.getInstance().newMessage(" sending: " + s);
+        new Thread()
         {
-            OutToServer.writeBytes(s + '\n');
-        } catch (Exception e) {e.printStackTrace();}
+            @Override
+            public void run()
+            {
+                try
+                {
+                    OutToServer.write((s + '\n').getBytes());
+                } catch(Exception e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
     }
 
     /* functions for actions */

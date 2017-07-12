@@ -16,6 +16,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
@@ -89,7 +90,14 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
 
         loginHandler = new LoginHandler(getPreferences(MODE_PRIVATE), getContentResolver());
 
-        Log.i("WePark", "wtf is this shit");
+        String locationProviders = Settings.Secure.getString(getContentResolver(), Settings.Secure.LOCATION_PROVIDERS_ALLOWED);
+        if (locationProviders == null || locationProviders.equals(""))
+        {
+            Toast.makeText(MainActivity.this, "Please enable your phone's GPS for the app to function as intended.", Toast.LENGTH_LONG).show();
+            startActivity(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+        }
+
+       // Log.i("WePark", "wtf is this shit");
     }
 
 
@@ -365,8 +373,8 @@ public class MainActivity extends FragmentActivity implements OnMapReadyCallback
                 data1 = data1.substring(data1.indexOf(",") + 1);
 
                 //TODO: server decide what parking spots to send user based on distance
-                if (LocationListener.distanceTo(lat, lng) > 0.08)//only show parking in a ~10 mile radius (longitude is shorter than latitude)
-                    return;
+                //if (LocationListener.distanceTo(lat, lng) > 0.08)//only show parking in a ~10 mile radius (longitude is shorter than latitude)
+                  //  return;
 
                 int minutesAgo = (int) Double.parseDouble(data1);
                 int color = 0x000000FF;//blue
